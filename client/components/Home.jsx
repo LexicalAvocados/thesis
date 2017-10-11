@@ -45,8 +45,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-<<<<<<< HEAD
 )(Home);
-=======
-  ) (Home)
->>>>>>> with basic navbar and stylesheet
