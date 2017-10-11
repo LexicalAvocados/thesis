@@ -1,0 +1,13 @@
+body {
+  font-family: 'Montserrat'
+}
+
+.navItem {
+  color: black;
+  padding: 10px;
+  font-family: 'Montserrat'
+}
+
+.navItem:hover {
+  text-decoration: underline;
+}
