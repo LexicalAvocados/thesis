@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Bluebird = require('bluebird');
-const router = require('./server/router')
+const router = require('./server/router');
 const db = require('./db');
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(express.static(__dirname + '/client'));
 
-app.use('/api', router)
+app.use('/api', router);
 
 app.get('*', (req, res) => {
 	res.sendFile(__dirname + '/client/index.html');
