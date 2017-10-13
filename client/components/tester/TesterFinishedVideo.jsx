@@ -24,32 +24,21 @@ class TesterFinishedVideo extends React.Component {
     })
   }
 
+  likeClick(e) {
+    e.preventDefault();
+
+    axios.post('/api/tester/getVideo', {
+      like: e.target.value
+    })
+    this.setState({
+      show: false
+    }) 
+  }
+
   render() {
       return (
-        <div className="feedbackModal">
+        <div>
 
-          <Modal show={true}>
-            <Modal.Header>
-              <Modal.Title>Feedback for Creator</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <div className="likeButtons">
-                <Button onClick={this.LikeOnClick}> Like </Button>
-                <Button onClick={this.LikeOnClick}> Eh </Button>
-                <Button onClick={this.LikeOnClick}> Dislike </Button>
-              </div>
-              <div className="feedbackTextArea">
-                <input type='text' placeholder='Any feedback for creator?'
-                       value={this.state.feedbackText} onChange={this.feedBackTextChange}>
-                </input>
-              </div>
-              <div className='controlButtons'>
-                <Button>Close</Button>
-                <Button bsStyle="primary">Submit</Button>
-              </div>
-
-            </Modal.Body>
-          </Modal>
 
         </div>
       )

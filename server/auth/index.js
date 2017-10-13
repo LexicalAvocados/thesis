@@ -58,7 +58,7 @@ exports.attemptLogin = (req, res) => {
           loggedIn: true,
           userData: existingUser,
         })
-
+        req.session.save();
         res.setHeader('Content-Type', 'application/json');
         res.send(resObj);
       } else {

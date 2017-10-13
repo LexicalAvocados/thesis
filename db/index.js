@@ -78,6 +78,15 @@ Option.belongsTo(Section);
 
 Option.sync({force: false});
 
+const TesterAndOption = sequelize.define('testerAndOption', {
+  like: Sequelize.BOOLEAN
+})
+
+Option.belongsToMany(User, {through: 'testerAndOption'});
+User.belongsToMany(Option, {through: 'testerAndOption'});
+
+TesterAndOption.sync({force: false});
+
 // ~~~~~~~~~~~~ //
 // Frame Schema //
 // ~~~~~~~~~~~~ //
@@ -108,5 +117,6 @@ module.exports = {
   Project: Project,
   Section: Section,
   Option: Option,
-  Frame: Frame
+  Frame: Frame,
+  TesterAndOption: TesterAndOption
 };
