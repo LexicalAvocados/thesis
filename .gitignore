@@ -30,3 +30,6 @@ bower_components/
 
 client/bundle.js
 package-lock.json
+
+photos
+.DS_Store

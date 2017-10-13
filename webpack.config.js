@@ -75,6 +75,9 @@ var config = {
       }
     }]
   },
+  node: {
+    fs: "empty"
+  },
   watch: true
 }
 
