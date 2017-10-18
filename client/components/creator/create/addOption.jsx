@@ -4,7 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as ChangeActions from '../../../actions';
-// import key from './key.js';
+import key from './key.js';
 
 class AddOption extends React.Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class AddOption extends React.Component {
         youTubeData.thumbnail = data.data.items[0].snippet.thumbnails.default.url;
         youTubeData.tags = data.data.items[0].snippet.tags;
         var unitsOfTime = ['H', 'M', 'S'];
-        var nums = []
+        var nums = [];
         for (var i = 0; i < unitsOfTime.length; i++) {
           var num = this.convert(data.data.items[0].contentDetails.duration, unitsOfTime[i]);
           if (i === 0 && num) {
@@ -56,12 +56,12 @@ class AddOption extends React.Component {
             num = num*60;
             nums.push(num);
           } else if (i === 2 && num) {
-            nums.push(num) 
+            nums.push(num);
           }
         }
         nums = nums.reduce((acc, cur) => {
           return acc + cur;
-        })
+        });
         youTubeData.length = nums;
         cb(youTubeData);
       })
@@ -105,14 +105,14 @@ class AddOption extends React.Component {
         var last = string[i - 1];
         if (!isNaN(string[i - 2])) {
           var first = string[i -2];
-          return Number(num = first + last)
+          return Number(num = first + last);
         } else {
           return Number(num = last);
         }
       }
     }
   }
-  
+
 
   render() {
     return (
@@ -121,9 +121,9 @@ class AddOption extends React.Component {
         <h2>Add Option</h2>
         <form onSubmit={this.submitOptionClick}>
         Option Name: <br />
-          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /><br />
+          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="name" value={this.state.name} onChange={this.handleChange} /><br />
           Option Description: <br />
-          <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /><br />
+          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="description" value={this.state.description} onChange={this.handleChange} /><br />
           Url: <br />
           <input type="text" name="url" value={this.state.url} onChange={this.handleChange} /><br />
           <input type="submit" value="Submit" />

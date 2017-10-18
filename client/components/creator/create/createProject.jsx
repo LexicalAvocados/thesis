@@ -50,9 +50,9 @@ class CreateProject extends React.Component {
         <h2>Create Project</h2>
         <form onSubmit={this.submitProjectClick}>
           Project Name: <br />
-          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /><br />
+          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="name" value={this.state.name} onChange={this.handleChange} /><br />
           Project Description: <br />
-          <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /><br />
+          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="description" value={this.state.description} onChange={this.handleChange} /><br />
           <input type="submit" value="Submit" />
 
         </form>
