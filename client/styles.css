@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+  /*font-family: 'Montserrat';*/
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+}
+
+.app {
+  padding: 4%;
+}
+
+.fblogin {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.navItem {
+  color: black;
+  padding: 10px;
+  font-family: 'Montserrat'
+}
+
+.navItem:hover {
+  text-decoration: underline;
+}
+
+.sideNavItem, .testerDetails {
+  text-align: center;
+}
+
+.projectContainer, .projectsContainer {
+  border: solid black 1px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px black;
+  padding: 15px;
+  width: 50%;
+  padding-bottom: 3.5%;
+  margin-bottom: 2%;
+}
+
+.optionAnalyticsContainer {
+  display: grid;
+  grid-template-columns: 10% 50% 40%;
+  grid-template-rows: 50% 50%;
+  padding: 10px;
+  grid-row-gap: 15px;
+  width: 97%;
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+.sidemenucontainer {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.optionPlayer {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 3%
+}
+
+.testerDetails {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.userSelect {
+  grid-column: 3;
+  grid-row: 1;
+  margin-left: 40%;
+}
+
+.emotionChart {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.optionChart {
+  grid-column: 2;
+  grid-row: 2;
+  width: 96%;
+}
+
+.lapseInFocus {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.bottomPanelContainer {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.testerAttention {
+  grid-column: 1;
+  margin-left: 10%;
+}
+
+.testerFeedback {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.rawValues{
+  grid-column: 1;
+}
+
+.progressBars{
+  grid-column: 2;
+}
+
+.testerNameHeader, .chartHeader {
+  text-align: center;
+}
+
+.overlay{
+  background: rgba(204, 204, 204, .8);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
+}
+
+.testerVideo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1000;
+  opacity: 0;
+}
+
+.videoPlayer {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 4%;
+  position: relative;
+  height: 60vh;
+}
+
+.videoWrapper {
+  height: 80vh;
+}
+
+.player {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.finishVideo {
+  margin: 15% 20% 20% 20%;
+  text-align: center;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+
+}
+
+.like {
+  background-color: #4CAF50;
+  margin-right: 5%;
+}
+
+.like:hover {
+  text-decoration: underline;
+}
+
+.unlike {
+  background-color: #f44336;
+}
+
+.unlike:hover {
+  text-decoration: underline;
+
+}
+
+.testerComments {
+  opacity: 1;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.TesterHomeContainer {
+  clear: right;
+}
+
+.CreateProject {
+  clear: right;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px 20px 20px 20px;
+}
+
+.CreateProject input[type=text] {
+  padding: 8px 16px;
+  margin: 6px 0;
+}
+
+.inputDescription {
+  width: 50%;
+}
+
+.navContainer {
+  font-family: 'Open Sans', sans-serif;
+  float: right;
+  display: flex;
+  padding: 0px 0% 3% 3%;
+  margin-left: 5%;
+  right: 0;
+  font-size: 20px;
+}
+
+.TesterHomeContainer {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 3% 3% 0% 2%;
+  border-radius: 12px;
+}
+
+.promoButton {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.testerProfile {
+  font-size: 16px;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 240px;
+}
+
+.profileHeading {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.profileLabel {
+  display: inline-flex;
+  font-weight: bold;
+}
+
+.profileInput {
+  display: inline-flex;
+}
+
+.auth {
+  display: flexbox;
+  font-size: 16px;
+  padding-top: 100px;
+  padding-left: 41%;
+  padding-right: 44%;
+}
+
+.loginHeader {
+  padding-left: 30%;
+  padding-right: 28%;
+  padding-bottom: 3%;
+}
+
+.signupHeader {
+  padding-left: 5%;
+  padding-bottom: 3%;
+}
+
+.signupCreator {
+  padding-bottom: 4%;
+}
+
+.authInput {
+  margin-bottom: 2px;
+}
+
+.authSubmit {
+  margin-top: 2%;
+}
+
+.optionAnnotations {
+  background-color: #f2f2f2;
+  padding: 12px;
+}
+
+.optionAnnotationsTitle {
+  text-align: center;
+}
+
+.annotations {
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 3px;
+  clear: right;
+  clear: left;
+  display: flex;
+}
+
+.annotations p {
+  font-size: .8em;
+  margin: 0;
+}
+
+.error {
+  color: red;
+}
+
+.annotationForm {
+  background-color: white;
+  border-radius: 3px;
+  padding: 2%;
+}
+
+.annotationForm Button {
+  font-size: 12px;
+}
+
+
+/* Lucas' CSS */
+.dashboardHomeContainer {
+  background-color: #f2f2f2;
+  height: 200vh;
+  clear: right;
+  /* margin-left: -2.1%; */
+  padding: 2%;
+  border-radius: 6px;
+}
+
+.projectHomeContainer {
+  background-color: #f2f2f2;
+  height: 200vh;
+  clear: right;
+  padding: 1% 2% 2% 2%;
+  border-radius: 6px;
+}
+
+.currentSectionOptionsList {
+  /* border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 1%; */
+  /* width: 100%; */
+}
+
+.sectionHomeContainer {
+  background-color: #f2f2f2;
+  height: 200vh;
+  clear: right;
+  padding: 1% 2% 2% 2%;
+}
+
+.currentSectionOptionListEntry {
+  float: left;
+  padding-right: 3%;
+  width: auto;
+  /* border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 1%; */
+}
+
+/* @keyframes reveal { DOESNT WORK
+  from {height: 0%;}
+  to {height: 100%;}
+} */
+
+.invitationPanel {
+  /* animation-name: reveal;
+  animation-duration: 2s;
+  overflow: auto;
+  height: auto; */
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2% 0% 2% 2%;
+  /* width: 110%; */
+  background-color: white;
+}
+
+.invitationPanelSelectors {
+  display: inline-flex
+}
+
+.testersList {
+  /* border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 1%;*/
+}
+
+.projectHomeSectionListEntry {
+  /* margin-bottom: 2%; */
+  border: solid black 1px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px black;
+  padding: 15px;
+  width: 50%;
+  padding-bottom: 3.5%;
+  margin-bottom: 2%;
+}
+
+.projectHomeSectionListThumbnail {
+  margin-right: 1.5%;
+}
+
+.closerTextLarger {
+  margin-bottom: 0%;
+  font-weight: bold;
+}
+
+.closerText {
+  margin-bottom: 0%;
+}
+
+.addSectionButton{
+  float: right;
+}
