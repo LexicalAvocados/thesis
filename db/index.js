@@ -38,6 +38,30 @@ const User = sequelize.define('user', {
 
 User.sync({force: false});
 
+// ~~~~~~~~~~~~~~~~~~ //
+// Focus Group Schema //
+// ~~~~~~~~~~~~~~~~~~ //
+
+const FocusGroup = sequelize.define('focusGroup', {
+  name: Sequelize.STRING
+});
+
+FocusGroup.belongsTo(User);
+
+FocusGroup.sync({force: false});
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// Focus Group / Tester Schema //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+const FocusGroupAndTester = sequelize.define('focusGroupAndTester', {
+});
+
+FocusGroup.belongsToMany(User, {through: 'focusGroupAndTester'});
+User.belongsToMany(FocusGroup, {through: 'focusGroupAndTester'});
+
+FocusGroupAndTester.sync({force: false});
+
 // ~~~~~~~~~~~~~~ //
 // Project Schema //
 // ~~~~~~~~~~~~~~ //
@@ -80,6 +104,10 @@ Option.belongsTo(Section);
 
 Option.sync({force: false});
 
+// ~~~~~~~~~~~~~~~~~~~~~~ //
+// Tester / Option Schema //
+// ~~~~~~~~~~~~~~~~~~~~~~ //
+
 const TesterAndOption = sequelize.define('testerAndOption', {
   like: Sequelize.BOOLEAN,
   finished: Sequelize.BOOLEAN,
@@ -115,6 +143,9 @@ Frame.belongsTo(Option);
 
 Frame.sync({force: false});
 
+// ~~~~~~~~~~ //
+// Key Schema //
+// ~~~~~~~~~~ //
 
 const Key = sequelize.define('key', {
   key: Sequelize.TEXT
@@ -125,12 +156,14 @@ Key.sync({force: false});
 // Key.create({key: 'cb1e44a3d50c4a5291591ca117880155'})
 
 module.exports = {
-  sequelize: sequelize,
-  User: User,
-  Project: Project,
-  Section: Section,
-  Option: Option,
-  Frame: Frame,
-  TesterAndOption: TesterAndOption,
-  Key: Key
+  sequelize,
+  User,
+  FocusGroup,
+  FocusGroupAndTester,
+  Project,
+  Section,
+  Option,
+  Frame,
+  TesterAndOption,
+  Key
 };

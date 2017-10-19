@@ -43,6 +43,9 @@ class Navbar extends React.Component {
                 <Link to='/' style={noUnderline}>
                   <p className='navItem'>Home</p>
                 </Link>
+                <Link to='/queue' style={noUnderline}>
+                  <p className='navItem'>Your Queue</p>
+                </Link>
                 <Link to='/profile' style={noUnderline}>
                   <p className='navItem'>Profile</p>
                 </Link>

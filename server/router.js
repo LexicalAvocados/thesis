@@ -38,4 +38,12 @@ router.post('/addOption', optionRoutes.addOption);
 
 router.post('/updateAfterFb', updateUserRoleRoutes.updateCreatorAfterSignup)
 
+router.post('/creator/newFocusGroup', indexRoutes.createNewFocusGroup);
+
+router.put('/creator/deleteFocusGroup', indexRoutes.deleteFocusGroup);
+
+router.post('/creator/addToFocusGroup', indexRoutes.addTesterToFocusGroup);
+
+router.put('/creator/removeFromFocusGroup', indexRoutes.removeTesterFromFocusGroup);
+
 module.exports = router;

@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as ChangeActions from '../actions';
 import DashboardHome from './creator/dashboard/dashboardHome.jsx';
+import FocusGroupsPage from './creator/dashboard/FocusGroupsPage.jsx';
 import Navbar from './Navbar.jsx';
 import Signup from './auth/signup.jsx';
 import Login from './auth/login.jsx';
@@ -42,6 +43,7 @@ export class App extends React.Component {
               <Switch>
                 <Route exact path="/" component={DashboardHome}/>
                 <Route path="/new" component={DashboardHome}/>
+                <Route path='/focusgroups' component={FocusGroupsPage}/>
                 <Route path="/testvideo" component={TesterVideo}/>
                 <Route path="/project:id" component={ProjectHome}/>
                 <Route path="/section:id" component={SectionHome}/>
@@ -53,6 +55,7 @@ export class App extends React.Component {
             ) : (
               <Switch>
                 <Route exact path="/" component={TesterHome}/>
+                <Route path="/queue" component={TesterQueue}/>
                 <Route path="/profile" component={TesterProfile}/>
                 <Route path="/video/:id" component={TesterVideo}/>
               </Switch>
@@ -80,7 +83,6 @@ export class App extends React.Component {
 const mapStateToProps = (state) => {
   console.log('state in App', state);
   return ({
-    example: state.example,
     router: state.router,
     loggedInUser: state.loggedInUser
   });

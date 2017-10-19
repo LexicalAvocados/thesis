@@ -5,6 +5,11 @@ export const SET_NAME = 'SET_NAME';
 export const SET_AGE = 'SET_AGE';
 export const SET_SEX = 'SET_SEX';
 export const SET_RACE = 'SET_RACE';
+export const ADD_FOCUS_GROUP = 'ADD_FOCUS_GROUP';
+export const DELETE_FOCUS_GROUP = 'DELETE_FOCUS_GROUP';
+export const ADD_TESTER_TO_FOCUS_GROUP = 'ADD_TESTER_TO_FOCUS_GROUP';
+export const REMOVE_TESTER_FROM_FOCUS_GROUP = 'REMOVE_TESTER_FROM_FOCUS_GROUP';
+export const CHANGE_CURRENT_FOCUS_GROUP = 'CHANGE_CURRENT_FOCUS_GROUP';
 export const CHANGE_CURRENT_PROJECT = 'CHANGE_CURRENT_PROJECT';
 export const CHANGE_CURRENT_SECTION = 'CHANGE_CURRENT_SECTION';
 export const CHANGE_CURRENT_OPTION = 'CHANGE_CURRENT_OPTION';
@@ -52,6 +57,34 @@ export const setRace = (race) => ({
   race
 });
 
+export const addFocusGroup = (focusGroupName) => ({
+  type: ADD_FOCUS_GROUP,
+  focusGroupName
+});
+
+export const deleteFocusGroup = (focusGroupName) => ({
+  type: DELETE_FOCUS_GROUP,
+  focusGroupName
+});
+
+export const addTesterToFocusGroup = (focusGroupName, testerUsername) => ({
+  type: ADD_TESTER_TO_FOCUS_GROUP,
+  focusGroupName,
+  testerUsername
+});
+
+export const removeTesterFromFocusGroup = (focusGroupName, testerUsername) => ({
+  type: REMOVE_TESTER_FROM_FOCUS_GROUP,
+  focusGroupName,
+  testerUsername
+});
+
+export const changeCurrentFocusGroup = (index, focusGroups) => ({
+  type: CHANGE_CURRENT_FOCUS_GROUP,
+  index,
+  focusGroups
+});
+
 export const changeCurrentProject = (obj) => ({
 	type: CHANGE_CURRENT_PROJECT,
 	obj
@@ -80,9 +113,13 @@ export const addOptionsToCurrentSection = (optionObj) => ({
 export const changeTesterOption = (obj) => ({
   type: CHANGE_TESTER_OPTION,
   obj
+<<<<<<< HEAD
 });
 
 export const setRoleForNewFbUser = (obj) => ({
 	type: SET_ROLE_FOR_NEW_FB_USER,
 	obj
 });
+=======
+});
+>>>>>>> focusgroups
