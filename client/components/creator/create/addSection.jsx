@@ -56,9 +56,13 @@ class AddSection extends React.Component {
         <br/>
         <form onSubmit={this.submitSectionClick}>
           New Section Name: <br />
-          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="name" value={this.state.name} onChange={this.handleChange} /><br />
+          <div className="SectionNameInput">
+            <input type="text" pattern=".{3,}" required title="3 characters minimum" name="name" value={this.state.name} onChange={this.handleChange} /><br />
+          </div>
           Section Description: <br />
-          <input type="text" pattern=".{3,}" required title="3 characters minimum" name="description" value={this.state.description} onChange={this.handleChange} /><br />
+          <div className="SectionDescriptionInput">
+            <textarea type="text" pattern=".{3,}" required title="3 characters minimum" name="description" value={this.state.description} onChange={this.handleChange} /><br />
+          </div>
           <input type="submit" value="Submit" />
         </form>
       </div>

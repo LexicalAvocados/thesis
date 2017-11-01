@@ -57,11 +57,11 @@ class AddOption extends React.Component {
       }
     })
       .then((data) => {
-        console.log('response from youtube', data);
+        // console.log('response from youtube', data);
         youTubeData.thumbnail = data.data.items[0].snippet.thumbnails.default.url;
         youTubeData.tags = data.data.items[0].snippet.tags;
-        console.log('youtubeData>>>>>>', youTubeData);
-        console.log('youtubeData.tags>>>>>>', youTubeData.tags);
+        // console.log('youtubeData>>>>>>', youTubeData);
+        // console.log('youtubeData.tags>>>>>>', youTubeData.tags);
         var unitsOfTime = ['H', 'M', 'S'];
         var nums = [];
         for (var i = 0; i < unitsOfTime.length; i++) {

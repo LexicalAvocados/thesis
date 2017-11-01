@@ -418,8 +418,29 @@ body {
   margin: 6px 0;
 }
 
-.inputDescription {
+.ProjectNameInput input {
   width: 50%;
+}
+
+.ProjectDescriptionInput textarea {
+  width: 50%;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.SectionNameInput input{
+  width: 50%;
+} 
+
+.SectionDescriptionInput textarea{
+  width: 50%;
+  height: 50px;
+}
+
+.inputDescription {
+  display: flex;
+  width: 50%;
+  flex-shrink: 3;
 }
 
 .navContainer {

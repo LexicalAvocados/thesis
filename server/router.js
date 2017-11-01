@@ -13,7 +13,7 @@ const detailedDemographicsRoutes = require('./api/creator/detailedDemographicsRo
 const creditRoutes = require('./api/tester/creditRoutes.js');
 const eyeTrackingRoutes = require('./api/creator/eyeTrackingRoutes.js');
 const optionHomeUtilityRoutes = require('./api/creator/optionHomeUtilityRoutes.js');
-const authRoutes = require('./auth/auth.js')
+const authRoutes = require('./auth/auth.js');
 const AccountInfoRoutes = require('./api/creator/updateAccountInfoRoutes.js');
 const FocusGroups = require('./api/creator/focusGroup.js');
 
