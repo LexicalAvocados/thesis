@@ -244,6 +244,10 @@ const Key = sequelize.define('key', {
 
 Key.sync({force: false});
 
+Key.create({
+  key: "4fc26d1500d04025a699f1ae74597ab3"
+})
+
 
 // ~~~~~~~~~~~~~~~~~~~ //
 // Eye Tracking Schema //

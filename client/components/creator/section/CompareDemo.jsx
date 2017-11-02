@@ -15,15 +15,22 @@ class CompareDemo extends React.Component {
 
   render () {
     return (
-    	<div className="optionDemographics">
 
-        <h4> Demographics </h4>
-
-        <h5> Total Viewers: {this.props.data.total} </h5>
-        <h5> Average Age: {this.props.data.age.toFixed(2)} </h5>
-        <h5> Gender Distribution: {this.props.data.male}M/{this.props.data.total - this.props.data.male}F ({((this.props.data.male/this.props.data.total)*100).toFixed(2)}%/{(((this.props.data.total - this.props.data.male)/this.props.data.total)*100).toFixed(2)}%) </h5>
-
+    <div className="testerDetails">
+      <div className="optionTitle">
+        <h4> <small> Demographics </small> </h4>
       </div>
+      <hr/>
+        <div className='allUsers'>
+          <p> Total Viewers: {this.props.data.total} </p>
+          <div className='averages'>
+            <p> Average Age: {this.props.data.age.toFixed(2)} </p>
+            <p> Gender Distribution: {this.props.data.male}M/{this.props.data.total - this.props.data.male}F ({((this.props.data.male/this.props.data.total)*100).toFixed(2)}%/{(((this.props.data.total - this.props.data.male)/this.props.data.total)*100).toFixed(2)}%)</p>
+          </div>
+        </div>
+        <br/>
+        <br/>
+    </div>
     );
   }
 }

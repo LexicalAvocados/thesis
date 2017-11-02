@@ -33,18 +33,18 @@ class CompareEmotion extends React.Component {
         }
       });
     return (
-    	<div className="optionDemographics">
 
-        <h4> Emotions </h4>
-
-
-        <div id={`emotionChart${this.props.idx}`}>
-
-        </div>
-
-        
-
-      </div>
+        <div className="testerDetails">
+          <div className="optionTitle">
+            <h4> <small> Emotions </small> </h4>
+          </div>
+          <hr/>
+            <div className='allUsers'>
+              <div id={`emotionChart${this.props.idx}`}>
+              </div>
+              <br/>
+            </div>
+          </div>
     );
   }
 }

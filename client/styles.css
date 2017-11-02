@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 /*@import 'antd/dist/antd.css';*/
 
 
@@ -11,6 +12,14 @@ body {
   /*font-family: 'Montserrat';*/
   font-family: 'Open Sans', sans-serif;
   margin: auto;
+}
+
+h2,
+/*h3,
+h4,
+h5,*/
+h6 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /*.app {
@@ -332,7 +341,7 @@ body {
   margin-right: 15%;
   margin-top: 4%;
   position: relative;
-  height: 40vh;
+  height: 55vh;
   /*width: 100%;*/
 }
 
@@ -609,15 +618,15 @@ body {
 
 .landingSectionB {
   text-align: center;
-  padding-top: 5%;
-  margin-bottom: 5%;
+  padding-top: 8%;
+  margin-bottom: 14%;
   height: 66vh;
 }
 
 .landingSectionC {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   overflow: auto;
 }
 
@@ -625,13 +634,40 @@ body {
   padding: 2% 10%;
 }
 
-.aBackground {
-  height: 70vh;
+.landingSectionSubLeft {
+  padding: 0% 10%;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.landingSectionSubLeft h5 {
+  line-height: 1.6;
+}
+
+.landingSectionSub h5 {
+  line-height: 1.6;
+}
+
+/*.aBackground {
+  height: 72vh;
   width: 100%;
   z-index: -5;
-  background-color: darkgrey;
-  opacity: .9;
+  background-color: #ad7ecf;
+  background-image: url("https://images.unsplash.com/photo-1493946947703-a0e68b050bee?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  opacity: .3;
   position: absolute;
+  margin-top: -2%;
+}*/
+.aBackground2 {
+  height: 82vh;
+  width: 100%;
+  z-index: -6;
+  /*background-color: #ad7ecf;*/
+  background-image: url("https://images.unsplash.com/photo-1493946947703-a0e68b050bee?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  margin-top: -5%;
 }
 
 .aInfo {
@@ -639,7 +675,7 @@ body {
   position: absolute;
   text-align: center;
   width: 100%;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 .landingFooter {
@@ -749,7 +785,7 @@ body {
 .sectionComparison {
   padding: 5%;
   margin: 2%;
-  background-color: white;
+  /*background-color: white;*/
   overflow:auto;
 }
 
@@ -957,4 +993,81 @@ body {
   animation-name: reveal;
   animation-duration: 2s;
   /* font-weight: bold; */
+}
+
+.overflowSectionX {
+  /*width: 120%;*/
+  text-align: center;
+
+}
+
+.card {
+  width: 95%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardImage1 {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/17434774_10211396571242715_5888271873694789837_o.jpg?oh=a77293d02d70a3d41f77bff1bef58e47&oe=5AA6F04C");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+
+.cardImage2 {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://s3.us-east-2.amazonaws.com/reaction-sync/Photo+on+11-1-17+at+1.35+PM+%232.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+
+.cardImage3 {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://s3.us-east-2.amazonaws.com/reaction-sync/headshot.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+
+.cardImage4 {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://s3.us-east-2.amazonaws.com/reaction-sync/cYgHfEr.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+.cardImage5 {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://s3.us-east-2.amazonaws.com/reaction-sync/17919731.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+
+.cardTitle {
+  text-align: center;
+}
+
+.cardTitle h5 {
+  line-height: .5;
+}
+
+.teamTitle {
+  text-align: center;
+  margin-bottom: 20px;
 }

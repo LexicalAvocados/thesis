@@ -203,7 +203,7 @@ router.post('/sendFrame', (req, res) => {
   // console.log('FRAMES', req.body);
   User.findAll({
     where: {
-      username: req.session.username
+      username: req.session.username || req.session.passport.user.username
     }
   })
 	  .then(user => {
